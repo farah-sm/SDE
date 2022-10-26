@@ -1,4 +1,4 @@
-  GNU nano 4.8                                                                                                     bashtask.sh                                                                                                     Modified  #!/bin/bash
+  GNU nano 4.8                                                                                                     bashtask.sh                                                                                                               #!/bin/bash
 
 
 
@@ -19,28 +19,25 @@ fi
 
 
 i=0
-j=0
-
-
-
-while test $i -gt numstr
+((numstr = $numstr - 1 ))
+while test $i -lt $numstr
 do
 
-
-        while test $j -lt numstr
+        j=0
+        while test $j -lt $numstr
         do
 
-                if test ${myArray[$j]} -gt ${myArray[$(($j+1))]}
-                test
-                        #swap
+                if [[ ${myArray[$j]} > ${myArray[$(($j+1))]} ]]
+                then
+                        echo "swap $j"
                         temp=${myArray[$j]}
-                        myArray[$j]=${myArray[$(($j+1))]}
-                        myArray[$(($j+1))]=$temp
+                        myArray[$j]=${myArray[$j+1]}
+                        myArray[$j+1]=$temp
                 fi
 
-        ((i=$i+1))
+        ((j=$j+1))
         done
-((j=$j+1))
+((i=$i+1))
 done
 
 echo "Array in sorted order:"
