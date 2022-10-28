@@ -40,6 +40,8 @@ do
         
         # The use of shift, increments the positional parameters to the next one eg. if $1 = 2, $2 = 8 & $3 = 9 then after the shift command $1 = 8, $2 = 9 etc.
         shift
+        
+        # Increment the variable $i by 1 each time during the loop
         ((i=$i+1))
         
 # The end of the while loop        
