@@ -1,2 +1,2 @@
-# SDE-
+# SDE
 Software Development Enviroments
