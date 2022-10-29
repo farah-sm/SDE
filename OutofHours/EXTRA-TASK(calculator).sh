@@ -8,10 +8,6 @@ add=+
 mult=x
 subt=-
 div=/
-#total=0
-#total_s=0
-#total_d=1
-#total_m=1
 
 
 
@@ -22,26 +18,22 @@ do
 function add
 {
         sum=$((${myArray[i-1]} + ${myArray[i+1]}))
-#       total=$sum
 }
 
 
 function subt
 {
         sum=$((${myArray[i-1]} - ${myArray[i+1]}))
-#       total_s=$sum
 }
 
 function div
 {
         sum=$((${myArray[i-1]} / ${myArray[i+1]}))
-#       total_d=$sum
 }
 
 function mult
 {
         sum=$((${myArray[i-1]} * ${myArray[i+1]}))
-#       total_m=$sum
 }
 
 
@@ -61,7 +53,6 @@ function mult
         esac
 
 
-#final=$(($total + $total_s + $total_d + $total_m))
 
 
 
@@ -69,3 +60,10 @@ function mult
 done
 
 echo "${myArray[*]} = $sum"
+
+
+
+
+
+
+
