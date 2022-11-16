@@ -28,7 +28,7 @@ readyQueue=()
 #for ((j=$i; j<${#arrayTemp[*]}; j++))
 #do
 
-
+ 
 while test $i -lt ${#arrayTemp[*]}
 do
 
